@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from '../logo.png';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = () => {
+  
     return (
       <div>
         <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
@@ -45,7 +45,7 @@ class App extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default App;
