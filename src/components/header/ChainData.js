@@ -1,41 +1,85 @@
 import React, {useState, useEffect} from 'react'
 import styled from "styled-components"
+import Web3 from 'web3';
+import useContract from "../hooks/useContract"
 
 function ChainData() {
-    const [address, setAddress] = useState("")
+    // const [address, setAddress] = useState("")
+    const { daiContract, data, setData, web3 } = useContract({})
 
+    const loadDai = async() => {
+
+        daiContract.methods.balanceOf(window.ethereum.selectedAddress.toString()).call((error, result) => {
+            result ? setData({
+                ...data,
+                daiBalance: web3.utils.fromWei(result).toString()
+            })
+                : console.log(error)
+        })
+        const ethBalance = await web3.eth.getBalance(window.ethereum.selectedAddress.toString())
+        setData({
+            ...data,
+            ethBalance: web3.utils.fromWei(ethBalance)
+        })
+        
+    }
+    // loadDai()
+
+
+    
+    // displayed selected address if any on page load
     useEffect(() => {
+        // loadDai()
+        window.ethereum.setMaxListeners(0)
 
-        try {
-            setAddress(truncate(window.ethereum.selectedAddress))
-        } catch{setAddress("Please connect to MetaMask")}
+        // if (window.ethereum.selectedAddress !== null) {
+        //     loadAddress()
+        // } else {
+        //      setData({
+        //         ...data,
+        //         address: "Please connect to MetaMask"})
+        // }
+           
+        // loadDai()
     }, [])
 
-    useEffect(() => {
-        const metamaskEvent = () => {
-          window.ethereum.on('accountsChanged', (accounts) => {
-            setAddress(truncate(window.ethereum.selectedAddress))
-          });
-          window.ethereum.on('chainChanged', (chainId) => {
-            window.location.reload();
-          });
-          
-        }
-         metamaskEvent();
-        return () => {
-            window.ethereum.removeAllListeners()
-        }
+
+    // handles accounts and chain change events:
+    // useEffect(() => {
         
-      }, [window.ethereum])
+    // const metamaskEvent = () => {
+    //     //   window.ethereum.removeAllListeners()  
+        
+    //         window.ethereum.once('accountsChanged', (accounts) => {
+    //             setData({
+    //                 ...data,
+    //                 address: truncate(window.ethereum.selectedAddress)})
+    //         });
+    //         window.ethereum.once('chainChanged', (chainId) => {
+    //             window.location.reload();
+    //         });
+          
+    //             }
+        
+    //      metamaskEvent();
+    //     return () => {
+            
+            
+    //     }
+        
+    //   }, [window.ethereum])
 
     const connect = async () => {
-
         await window.ethereum.request({ method: 'eth_requestAccounts' });
-        setAddress(truncate(window.ethereum.selectedAddress))
+        setData({
+            ...data,
+            address: truncate(window.ethereum.selectedAddress)
+        })
+       
     }
 
     const truncate = (str) => {
-        if (str !== undefined) {
+        if (str !== null) {
             return str.substr(0, 6) + '...' + str.substr(str.length - 4);
         } else {
           return  
@@ -47,7 +91,11 @@ function ChainData() {
 
     return (
         <Box>
-            {address}
+            <div>
+                {/* Available DAI Balance: {data.daiBalance} */}
+            </div>
+
+            {data.address}
             <Button onClick={connect}>{window.ethereum.selectedAddress === null ? ("Connect") : ("Connected 🤙")}</Button>
         </Box>
     )

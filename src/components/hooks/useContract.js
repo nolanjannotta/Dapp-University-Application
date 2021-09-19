@@ -1,37 +1,22 @@
-import { useState, useEffect } from "react"
-import { ethers } from "ethers";
-// import HTBOAR from "../ABI/HTBOAR.json"
+import { useState } from "react"
+import Web3 from 'web3';
+import daiABI from "../../ABIs/daiABI.json";
 
-// const contractAddress = "0xE65e520C45414dbF4E504206b4d1d2Bc8d505e21";
-// const contractAddresshardhat = "0x172076E0166D1F9Cc711C77Adf8488051744980C";
-const provider = new ethers.providers.Web3Provider(window.ethereum)
-const signer = provider.getSigner()
-const contract = new ethers.Contract(contractAddresshardhat, HTBOAR, provider)
 
 
 
 const useContract = () => {
+    const web3 = new Web3(window.ethereum)
+    const daiAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    const daiContract = new web3.eth.Contract(daiABI, daiAddress)
+
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState({})
     
-
-    // useEffect( () => {
-    //     const fetchData = async () => {
-            
-            
-    //     }
-
-    //     fetchData()
-
-        
-
-
-    // }, [])
-
     
     
-    return {contract, loading, setLoading, data, setData, provider, signer}
+    return {daiContract, loading, setLoading, data, setData, web3}
 }
 
 export default useContract
