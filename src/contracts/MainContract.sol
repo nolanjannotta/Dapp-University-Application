@@ -4,15 +4,23 @@ pragma solidity ^0.5.16;
 import "../compound-protocol/contracts/CTokenInterfaces.sol";
 
 contract MainContract {
+
+    CTokenInterface cDai;
+
+    constructor(address _cDai) public {
+        cDai = CTokenInterface(_cDai);
+
+
+    }
+
         
         
         
-        function getCompoundSupplyRate(address _cToken) public view returns (uint) {
-            CTokenInterface cToken = CTokenInterface(_cToken);
-            uint supplyRateMantissa = cToken.supplyRatePerBlock(); 
-            return supplyRateMantissa;
-      
-        }
+    function getCompoundDaiSupplyRate() public view returns (uint) {
+        uint daiSupplyRate = cDai.supplyRatePerBlock(); 
+        return daiSupplyRate;
+    
+    }
     
     
     
