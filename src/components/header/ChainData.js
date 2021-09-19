@@ -48,7 +48,7 @@ function ChainData() {
     return (
         <Box>
             {address}
-            <Button onClick={connect}>{window.ethereum.selectedAddress === null ? ("Connect") : ("Connected")}</Button>
+            <Button onClick={connect}>{window.ethereum.selectedAddress === null ? ("Connect") : ("Connected 🤙")}</Button>
         </Box>
     )
 }
