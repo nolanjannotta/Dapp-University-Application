@@ -1,0 +1,1944 @@
+{
+  "contractName": "MainContract",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "aaveLendingPool",
+      "outputs": [
+        {
+          "internalType": "contract ILendingPool",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cDai",
+      "outputs": [
+        {
+          "internalType": "contract CTokenInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "daiToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCompoundDaiSupplyRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAaveRate",
+      "outputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "data",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct DataTypes.ReserveConfigurationMap",
+              "name": "configuration",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidityIndex",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "variableBorrowIndex",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "currentLiquidityRate",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "currentVariableBorrowRate",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "currentStableBorrowRate",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint40",
+              "name": "lastUpdateTimestamp",
+              "type": "uint40"
+            },
+            {
+              "internalType": "address",
+              "name": "aTokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "stableDebtTokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "variableDebtTokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "interestRateStrategyAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "id",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct DataTypes.ReserveData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"aaveLendingPool\",\"outputs\":[{\"internalType\":\"contract ILendingPool\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"cDai\",\"outputs\":[{\"internalType\":\"contract CTokenInterface\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"daiToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getAaveRate\",\"outputs\":[{\"components\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"data\",\"type\":\"uint256\"}],\"internalType\":\"struct DataTypes.ReserveConfigurationMap\",\"name\":\"configuration\",\"type\":\"tuple\"},{\"internalType\":\"uint128\",\"name\":\"liquidityIndex\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"variableBorrowIndex\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"currentLiquidityRate\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"currentVariableBorrowRate\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"currentStableBorrowRate\",\"type\":\"uint128\"},{\"internalType\":\"uint40\",\"name\":\"lastUpdateTimestamp\",\"type\":\"uint40\"},{\"internalType\":\"address\",\"name\":\"aTokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"stableDebtTokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"variableDebtTokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"interestRateStrategyAddress\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"id\",\"type\":\"uint8\"}],\"internalType\":\"struct DataTypes.ReserveData\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getCompoundDaiSupplyRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/nolanjannotta/DU/Dapp-University-Application/src/contracts/MainContract.sol\":\"MainContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/nolanjannotta/DU/Dapp-University-Application/src/contracts/MainContract.sol\":{\"keccak256\":\"0xa166e64778a2b0328d6d1bb31db1383413121d412bd1ef6cee32ee6ee9e46bd2\",\"urls\":[\"bzz-raw://b21de7f7ed2abb838924a85d947165d33d98137fd4f4fd78dbe5a6932593517b\",\"dweb:/ipfs/QmdeBZc3SyZFvX4eCT2ePW43g6t9BSqT2giJ6HnzkrrR8e\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/configuration/AddressStorage.sol\":{\"keccak256\":\"0x079fa4d71c003221d60845732d33079b160e5669d06a61c36127bbfe3845b171\",\"urls\":[\"bzz-raw://ab0a2319a9f2df5c8b2b547786bef5b368ab713a1dfd811293eb92b6451f2d3b\",\"dweb:/ipfs/QmPamCovqkLEK34zW6nKreYToxFeE7R11mojiQegAJxZyM\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/configuration/LendingPoolAddressesProvider.sol\":{\"keccak256\":\"0x356a58b82ecc5f0076de1809cfb09f6560e9cb49b07ba02c507e157022c04bc9\",\"urls\":[\"bzz-raw://604442728d63c1cf25db9659ce7ad4357be9cdd2cb8e29d27a297fe701a077a9\",\"dweb:/ipfs/QmU8oYLESnuMGTY5ZRQRAvK9Gp2SmXxEXcdtju1ZXQJNry\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/configuration/LendingPoolParametersProvider.sol\":{\"keccak256\":\"0x031e4238c489c8fce9f6f5133010df47ccbbb3f45c175d11246411f0bdde20be\",\"urls\":[\"bzz-raw://73680439b66d04a661a69fe6e1107c6779723a8bae134252a3f33bb8efa07f8b\",\"dweb:/ipfs/QmZBv3VjSKBAjzdkepa4zKCMs8LUE5LashAAgrUDM12u7X\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/configuration/UintStorage.sol\":{\"keccak256\":\"0x3f74e899243a66d556c0fa81875ab95ed1e3af1909b0281d03fe89590b95121f\",\"urls\":[\"bzz-raw://be1e401270af075398906fbcaaa7d9d9b3e1a9018ee54617d92b0822eb875b27\",\"dweb:/ipfs/QmVC1qpZKqDb2cWegSpQYHzeraowgqfyryvguU19Qb8tgF\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/flashloan/interfaces/IFlashLoanReceiver.sol\":{\"keccak256\":\"0xa27643e29a0521cfedde2059c8c558a39b4ce17d20e66970fa6770426e9677c9\",\"urls\":[\"bzz-raw://3eddb6e660e2024a8f85f920261e991014ffd50002868084aba9ac40b5331e2a\",\"dweb:/ipfs/QmZ4DQMGS2WUTeejFdJrMrjyCcjd4PhYrqMgP1ZhTdpTnv\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/interfaces/IFeeProvider.sol\":{\"keccak256\":\"0xffc3aa98b71f2914098e428d53c56e8a11adc4a3c9c83366ca603e2c900e548e\",\"urls\":[\"bzz-raw://79789a649b7530983bc660033ba1bbf20d6f68dafe6a2a0eb380a2e0a2401c4c\",\"dweb:/ipfs/QmWLyjkjaEBm2awHhXzSNn8pQG9hktDk9HoXSYbP8aN8NA\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/interfaces/ILendingPoolAddressesProvider.sol\":{\"keccak256\":\"0xff6bbb9e7fa67ac67f807e4986863fae87d623266b2970cd102b892b5ed185af\",\"urls\":[\"bzz-raw://bd3978e384688d2fb0295ab42b3fe74c331b12d63a0d8c8f70b35d2d99c6c0f4\",\"dweb:/ipfs/QmaLfhk99FPfPNfLvJER9QtrpEKeBzgHVGjRNDYvrqXyWN\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/interfaces/ILendingRateOracle.sol\":{\"keccak256\":\"0xc8b4cdfd6a34c4b8d74b71815cbe861e7d48e692f0684be8d5de0b395b6b705f\",\"urls\":[\"bzz-raw://1c3586b0ed32ed7673b4e2031cb3af6881d21f20a30f395434bc39fa65de737a\",\"dweb:/ipfs/QmWSF386UA1NShQ7Q7WqozqrumnCWXDSxuFTgrnx4BjJcL\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/interfaces/IPriceOracleGetter.sol\":{\"keccak256\":\"0x58175d019ae6f47b4941461ba27dfe6afcc20d146e9bdb7a949902c7330803f3\",\"urls\":[\"bzz-raw://e118d81569a54c84d66c259d46e481e32cba80f56e99300a6a083b554421be4f\",\"dweb:/ipfs/QmVhbHRHdV8y2XgqznQg4CJGF8anFQctGDSsANGNi8TER9\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/interfaces/IReserveInterestRateStrategy.sol\":{\"keccak256\":\"0x2cac3923ddccd52d48ec16c12f8542c264b1dba0ceba8ed55dcae6a0ff3ece27\",\"urls\":[\"bzz-raw://6adddcb0f99f6749e3c42b0e36c59c867aba6a537c902d85de8005f37b24e781\",\"dweb:/ipfs/QmeBJBDZaaXrN8793Y4a3YP9VpNLVe3AwmQu163qoAG7Cg\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPool.sol\":{\"keccak256\":\"0xa427af22a7315f5cdbe2b690cbe808ba8b82de819f0766d748ab370b9cdfd525\",\"urls\":[\"bzz-raw://da81f299be91a94706a9563192acb7b73de831c77b568c3bb2855d90f697cf56\",\"dweb:/ipfs/QmPNvRLVFjMYGX2Puo1RAaAtHoYa81fKzK49N2mV644eg7\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPoolCore.sol\":{\"keccak256\":\"0xdd6dbcf0a7ac2dd7705f6614c60536596c0b3fb45263b157e9362ed26e6d6ce9\",\"urls\":[\"bzz-raw://0cb17bc3e1fa96cbe43cd9c70dec54f661fbadf7bc051492558e0047371a0256\",\"dweb:/ipfs/QmcYSfUBEt9JJVyZVJnkdYoYDc4p6hPWawdJCg4djiVr2J\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPoolDataProvider.sol\":{\"keccak256\":\"0x41fdf7523036ed4426586e3041666a7ffb898395e89e60314b73f0808adb447e\",\"urls\":[\"bzz-raw://669b4d5084057dec439d82004ee3bfcd308bd17be9be24e829e93fcc7e6a65fd\",\"dweb:/ipfs/QmTEaybrFnU9MY8fb9nz1Xs8HK7dfaGwCxuvheT3fgDUbD\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPoolLiquidationManager.sol\":{\"keccak256\":\"0x35a288cc3ee5210d28bc44e0c8ddd971e6840dd78b9064139a71933331d10e2b\",\"urls\":[\"bzz-raw://30fcb87a940d07c0ff5fec74a8f08accd0afc3d3374ed6d17ac5a157dea8cad5\",\"dweb:/ipfs/QmaJfjg4UZrtTAUP2fgHiQSuC3H2UnQqS7mAqEDCoiXADA\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/CoreLibrary.sol\":{\"keccak256\":\"0x43f37e31a7282e30514500b91d1b903ad1631a629e3dcef39eeff9451b7f1abc\",\"urls\":[\"bzz-raw://79bcdff9122703983fce65a9da94f19c7ac8b2f232b87ca03399fedf1724112d\",\"dweb:/ipfs/QmZesZ1pDGfTKo4UsjEmcfcBpDY6oZ2kxK6hjDxWRM7jZW\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/EthAddressLib.sol\":{\"keccak256\":\"0x6d13f10408208ebff44123254f6db03121a8fb5a73d84c2d94f4e9651932b70d\",\"urls\":[\"bzz-raw://50b64d66e1544fcef496cc68e98cee61cfbab58685dfc4d57f73a1308e3aec2a\",\"dweb:/ipfs/QmQwJ5ZpaNjrfREruW7RzppzbEv8Mxxj5Ln87DX1i1iXW5\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/WadRayMath.sol\":{\"keccak256\":\"0xeb4c4581bf5809af3759c4793839ad29c36d145cd8fca113de5ebd1e3590ccd6\",\"urls\":[\"bzz-raw://61d6f32727cd51873af3ccbe67eff38e0c947dd7cb77b0a1d0151e8bfb02de0b\",\"dweb:/ipfs/QmPhw2nUfiRBJeeu4yDdVrMqeNC8AEGzniH1TG69gjx3p3\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/BaseAdminUpgradeabilityProxy.sol\":{\"keccak256\":\"0xf2e16a1f8871ef17d0401642558c4f1596f6524859fa01443cfde837c2879544\",\"urls\":[\"bzz-raw://13199ef810b7f2188fbde76096f5e411c35f2ef6b032e82694b9ab2c8eb8810c\",\"dweb:/ipfs/QmSKPwEwbbJ7GAZveoyqAkQzyskN27WeNfTfP2VKED7zGF\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/BaseUpgradeabilityProxy.sol\":{\"keccak256\":\"0x832aa0ecb5fbd8585fe96d96f7ca6417c318fe29f228f8e8c3b4f382602709d0\",\"urls\":[\"bzz-raw://c3fa785c03ca09e4d68d3addde1d5ba97d96d9a402e7c09fc892e1666fdabad2\",\"dweb:/ipfs/Qmbbof1LwgU1cgpW8L3zQeMW6iyjGM24qJBZ7aVVwjqgoC\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/InitializableAdminUpgradeabilityProxy.sol\":{\"keccak256\":\"0x21e6b79157ff2014d20b18a380d9b0bdedc5fcb220d7210ba52e78de288dca28\",\"urls\":[\"bzz-raw://4e49eb1a180bc34c74ca96c9982ff93c2c8f4410dd6d7861ace0959936e1857d\",\"dweb:/ipfs/QmV4HjFmkyx2sMj6Ghda5XNYFKtHL5QG9qbagtHdzPVKAM\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/InitializableUpgradeabilityProxy.sol\":{\"keccak256\":\"0x90dd0f65ee16a11f2c1f413bf13dc8b153b8c41854c8c3965b42f99a2200cd1d\",\"urls\":[\"bzz-raw://3e14953656bbc19d812ee9fc418a4df69100782194ca95bf757f3987a718be66\",\"dweb:/ipfs/QmcTmFcZMbesvtScuRYenfiPdHXbG9sWxPRswHdsFGozRB\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/Proxy.sol\":{\"keccak256\":\"0xd8dcdaaf2f03c606a569d91506958bf78df9adfb41df76727857e5dfe956e872\",\"urls\":[\"bzz-raw://1d780033022b07478621ce08cd4e668603fc899ae3212a883eea23347937e8d5\",\"dweb:/ipfs/QmVZkBHpdDjko87qT4597e3UZ5uYdrEfPYbamEjBep52Se\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/UpgradeabilityProxy.sol\":{\"keccak256\":\"0x5829b59012f64d1ce3ae6b98a61ddf5d6daa6e6f1a54e336ce910c8afd415c69\",\"urls\":[\"bzz-raw://28cba7d1f3d67aab91a4f88df4cb63762b443c31cb62a87e957add0b43dc8e1a\",\"dweb:/ipfs/QmUXzpQDBXA2xGSNRqjn3VMJ3o8RXmpATieU9ovvk6QDAD\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/libraries/openzeppelin-upgradeability/VersionedInitializable.sol\":{\"keccak256\":\"0x8691eb3d853842f32d3b1e65c788f3db226901ec82c3de52c21eb029dc7f545b\",\"urls\":[\"bzz-raw://c46f6c422db674265552cb12abce67088e23fbec2723a5d1173058e2b0f3378a\",\"dweb:/ipfs/QmXnBcGWAX8wAvZngxxVwvAPKpxnZ8ABdWKaf8cYb25qns\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/tokenization/AToken.sol\":{\"keccak256\":\"0x53e5167142bfbfe0367f8101996353d718e79bbdd100eae9c4ee4fc3ab503e14\",\"urls\":[\"bzz-raw://806418e40e4bb0a03fcdbb578e77d4fc14464f5a3df348b6f51b83cdaef7db77\",\"dweb:/ipfs/QmSixjXLSHJiWhkPaaiWBxtKxrzwSuhwG7iSFWGMFTY2ah\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/CTokenInterfaces.sol\":{\"keccak256\":\"0x963bbf60b4c0b76900b3fcb2db8c8be634934b37b4113f1055e57a308197d21a\",\"urls\":[\"bzz-raw://b14d80dadf95a76309335fc0501b26b8bb3787f36f4d3fc51287fcc682b74b50\",\"dweb:/ipfs/QmYLJ3eFtbETU7UQPX3ZsWsCqK6CbttNvQ6zFY99SFjSkA\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/ComptrollerInterface.sol\":{\"keccak256\":\"0xede7670d2dd7b25d0187aecd2c28b7b5ca7d7c1bdac144fbedecf5d4bdd92a6b\",\"urls\":[\"bzz-raw://ffeffe133548cc3b8e97b040b12ae5e041d84f9b482f45b7d536d78eaf6c1550\",\"dweb:/ipfs/QmWYsBjz19U4aBbJmQ96A5sa23UKZnaS3k8oN8bNTyAUsz\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/EIP20NonStandardInterface.sol\":{\"keccak256\":\"0x9719f12e4b80b51147ac195553a198cf8b0c516e7e4d04fc324a23ed15cbafb2\",\"urls\":[\"bzz-raw://50c3ba49b80106c88b0171390aa4127edc86f7b29607abe3dc6d08eaefebf837\",\"dweb:/ipfs/QmP6AHNmFdwYwWUeHnhYi3drCQy4dpnnqUbkMeU3oAtokj\"]},\"/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/InterestRateModel.sol\":{\"keccak256\":\"0x929282d73c79e6d700ebe79f9fafc1e414b3848acff5a56d6740afd1dc908678\",\"urls\":[\"bzz-raw://77dcd4af0c065447f01358ebd4b35747e8c75963f6cd450df605a3eb62747056\",\"dweb:/ipfs/QmPri5JmuE5KDkgC55eJTEYZHNJJ1kfN5t5WYZRmRFSz6T\"]},\"@aave/protocol-v2/contracts/interfaces/ILendingPool.sol\":{\"keccak256\":\"0x786d4bb9cd191e38d4ca8907260db6a3fe52afc27ed360f6132e4f658a790dde\",\"urls\":[\"bzz-raw://bf8b112ec4becf3fe62d0394e4635d635d4d8bf213a021286c1502702942a770\",\"dweb:/ipfs/QmPoNRRTkTG7NekzGLRVMi9NmrcU5P2ocjLdKbtyF42hpA\"]},\"@aave/protocol-v2/contracts/interfaces/ILendingPoolAddressesProvider.sol\":{\"keccak256\":\"0x043a9765549e2f19d9776848c25c34643f3e102a8d31964d2b8b7f198e02ecf5\",\"urls\":[\"bzz-raw://3910c0f24b49e0f2c35e93071976e551ae6a072ce44e89f41e2155a4b7790485\",\"dweb:/ipfs/QmTZVXhTnAqxUBNmy8hEGf1cMkCb87bT8CbUnroENDEGQr\"]},\"@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol\":{\"keccak256\":\"0xa88d37dfb4ad37430fed75b47eca34941c236fe3b01266151161238d381937b5\",\"urls\":[\"bzz-raw://75d061e08401f0301e65aa03910ac7caee1d0590182d69bfd4c5534ac714d505\",\"dweb:/ipfs/QmSD6TXxqWKbM3YxoCJhFj4xihNDSdWzuUHqXUuV3bi5XU\"]},\"openzeppelin-solidity/contracts/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0x6fb9d7889769d7cc161225f9ef7a90e468ba9788b253816f8d8b6894d3472c24\",\"urls\":[\"bzz-raw://cf4c00fc3c37cc5acf0c82ec6fd97bab67d72c2567fdc0ebf023d9c09b30a08e\",\"dweb:/ipfs/Qmb7TChG6DsEDX7LooJ4vmxot19f7VXX8S1zUGPeJTWbwZ\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xb15af804e2bc97db51e4e103f13de9fe13f87e6b835d7a88c897966c0e58506e\",\"urls\":[\"bzz-raw://1e8cff8437557fc915a3bed968fcd8f2df9809599e665ef69c2c9ce628548055\",\"dweb:/ipfs/QmP5spYP8vs2jvLF8zNrXUbqB79hMsoEvMHiLcBxerWKcm\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol\":{\"keccak256\":\"0x4a3a810b7ebe742e897e1fd428b3eeed2196d3acea58eaf9c566ed10d545d2ed\",\"urls\":[\"bzz-raw://28d03f328e19e4099d5013de0649afaeaabac1a614e130767ab1cb4aca9775b6\",\"dweb:/ipfs/Qmb9iW7yNuYehB2NfhRMs9TakqbLVQhBhmGMkaDZ5g1Eb4\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]},\"openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x6f2c9955d65c522b80f4b8792f076512d2df947d2112cbc4d98a4781ed42ede2\",\"urls\":[\"bzz-raw://7d8ec81683520c06baeef3f7e06cd82bd6fd5fa611f26857f475f6c829540aff\",\"dweb:/ipfs/QmTDkFzKnrpiV1UKnSoiZAHPuguWzokrr4pFbSPvyaSo56\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0x1a8e5072509c5ea7365eb1d48030b9be865140c8fb779968da0a459a0e174a11\",\"urls\":[\"bzz-raw://03335b7b07c7c8c8d613cfdd8ec39a0b5ec133ee510bf2fe6cc5a496767bef4b\",\"dweb:/ipfs/Qmebp4nzPja645c9yXSdJkGq96oU3am3LUnG2K3R7XxyKf\"]},\"openzeppelin-solidity/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0xb63221b23818d622bfd83d18e0968307e4fcb7a35536bdceded76e1cf8349acd\",\"urls\":[\"bzz-raw://44e1e8c22362c4708a8c3362735f1465f5b05e2f7315e16c7010d694ce019d73\",\"dweb:/ipfs/QmWj9g8X1hxkXRre2kwkEjLBetjuzmSbWHD81bsSojnBkS\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50735d3a536e4d6dbd6114cc1ead35777bab948e36436000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550737d2768de32b0b80b7a3454c06bdac94a69ddc7a9600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550736b175474e89094c44da98b954eedeac495271d0f600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506109ff8061011e6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80639b089d551461005c578063b1dfd8b41461007a578063bd9e2dd614610098578063be22f546146100b6578063e9d337b8146100d4575b600080fd5b6100646100f2565b60405161007191906107f1565b60405180910390f35b610082610117565b60405161008f9190610843565b60405180910390f35b6100a06101c2565b6040516100ad9190610827565b60405180910390f35b6100be6102a9565b6040516100cb91906107d6565b60405180910390f35b6100dc6102cf565b6040516100e9919061080c565b60405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ae9d70b06040518163ffffffff1660e01b815260040160206040518083038186803b15801561018157600080fd5b505afa158015610195573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506101b99190810190610614565b90508091505090565b6101ca6102f5565b6101d26102f5565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166335ea6a75600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff1660e01b815260040161024f91906107d6565b6101806040518083038186803b15801561026857600080fd5b505afa15801561027c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506102a091908101906105ea565b90508091505090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b604051806101800160405280610309610418565b815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff168152602001600064ffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600060ff1681525090565b6040518060200160405280600081525090565b60008151905061043a81610949565b92915050565b60006020828403121561045257600080fd5b61045c602061085e565b9050600061046c848285016105ab565b60008301525092915050565b6000610180828403121561048b57600080fd5b61049661018061085e565b905060006104a684828501610440565b60008301525060206104ba84828501610596565b60208301525060406104ce84828501610596565b60408301525060606104e284828501610596565b60608301525060806104f684828501610596565b60808301525060a061050a84828501610596565b60a08301525060c061051e848285016105c0565b60c08301525060e06105328482850161042b565b60e0830152506101006105478482850161042b565b6101008301525061012061055d8482850161042b565b610120830152506101406105738482850161042b565b61014083015250610160610589848285016105d5565b6101608301525092915050565b6000815190506105a581610960565b92915050565b6000815190506105ba81610977565b92915050565b6000815190506105cf8161098e565b92915050565b6000815190506105e4816109a5565b92915050565b600061018082840312156105fd57600080fd5b600061060b84828501610478565b91505092915050565b60006020828403121561062657600080fd5b6000610634848285016105ab565b91505092915050565b6106468161088b565b82525050565b6106558161088b565b82525050565b61066481610901565b82525050565b61067381610925565b82525050565b60208201600082015161068f600085018261079a565b50505050565b610180820160008201516106ac6000850182610679565b5060208201516106bf602085018261078b565b5060408201516106d2604085018261078b565b5060608201516106e5606085018261078b565b5060808201516106f8608085018261078b565b5060a082015161070b60a085018261078b565b5060c082015161071e60c08501826107b8565b5060e082015161073160e085018261063d565b5061010082015161074661010085018261063d565b5061012082015161075b61012085018261063d565b5061014082015161077061014085018261063d565b506101608201516107856101608501826107c7565b50505050565b6107948161089d565b82525050565b6107a3816108d9565b82525050565b6107b2816108d9565b82525050565b6107c1816108e3565b82525050565b6107d0816108f4565b82525050565b60006020820190506107eb600083018461064c565b92915050565b6000602082019050610806600083018461065b565b92915050565b6000602082019050610821600083018461066a565b92915050565b60006101808201905061083d6000830184610695565b92915050565b600060208201905061085860008301846107a9565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561088157600080fd5b8060405250919050565b6000610896826108b9565b9050919050565b60006fffffffffffffffffffffffffffffffff82169050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600064ffffffffff82169050919050565b600060ff82169050919050565b600061090c82610913565b9050919050565b600061091e826108b9565b9050919050565b600061093082610937565b9050919050565b6000610942826108b9565b9050919050565b6109528161088b565b811461095d57600080fd5b50565b6109698161089d565b811461097457600080fd5b50565b610980816108d9565b811461098b57600080fd5b50565b610997816108e3565b81146109a257600080fd5b50565b6109ae816108f4565b81146109b957600080fd5b5056fea365627a7a723158200a52a598a2d34550e3e7692b5b6363de06b1a5b577a865e6cd5b94f7a243fda66c6578706572696d656e74616cf564736f6c63430005110040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80639b089d551461005c578063b1dfd8b41461007a578063bd9e2dd614610098578063be22f546146100b6578063e9d337b8146100d4575b600080fd5b6100646100f2565b60405161007191906107f1565b60405180910390f35b610082610117565b60405161008f9190610843565b60405180910390f35b6100a06101c2565b6040516100ad9190610827565b60405180910390f35b6100be6102a9565b6040516100cb91906107d6565b60405180910390f35b6100dc6102cf565b6040516100e9919061080c565b60405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ae9d70b06040518163ffffffff1660e01b815260040160206040518083038186803b15801561018157600080fd5b505afa158015610195573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506101b99190810190610614565b90508091505090565b6101ca6102f5565b6101d26102f5565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166335ea6a75600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff1660e01b815260040161024f91906107d6565b6101806040518083038186803b15801561026857600080fd5b505afa15801561027c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506102a091908101906105ea565b90508091505090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b604051806101800160405280610309610418565b815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff16815260200160006fffffffffffffffffffffffffffffffff168152602001600064ffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600060ff1681525090565b6040518060200160405280600081525090565b60008151905061043a81610949565b92915050565b60006020828403121561045257600080fd5b61045c602061085e565b9050600061046c848285016105ab565b60008301525092915050565b6000610180828403121561048b57600080fd5b61049661018061085e565b905060006104a684828501610440565b60008301525060206104ba84828501610596565b60208301525060406104ce84828501610596565b60408301525060606104e284828501610596565b60608301525060806104f684828501610596565b60808301525060a061050a84828501610596565b60a08301525060c061051e848285016105c0565b60c08301525060e06105328482850161042b565b60e0830152506101006105478482850161042b565b6101008301525061012061055d8482850161042b565b610120830152506101406105738482850161042b565b61014083015250610160610589848285016105d5565b6101608301525092915050565b6000815190506105a581610960565b92915050565b6000815190506105ba81610977565b92915050565b6000815190506105cf8161098e565b92915050565b6000815190506105e4816109a5565b92915050565b600061018082840312156105fd57600080fd5b600061060b84828501610478565b91505092915050565b60006020828403121561062657600080fd5b6000610634848285016105ab565b91505092915050565b6106468161088b565b82525050565b6106558161088b565b82525050565b61066481610901565b82525050565b61067381610925565b82525050565b60208201600082015161068f600085018261079a565b50505050565b610180820160008201516106ac6000850182610679565b5060208201516106bf602085018261078b565b5060408201516106d2604085018261078b565b5060608201516106e5606085018261078b565b5060808201516106f8608085018261078b565b5060a082015161070b60a085018261078b565b5060c082015161071e60c08501826107b8565b5060e082015161073160e085018261063d565b5061010082015161074661010085018261063d565b5061012082015161075b61012085018261063d565b5061014082015161077061014085018261063d565b506101608201516107856101608501826107c7565b50505050565b6107948161089d565b82525050565b6107a3816108d9565b82525050565b6107b2816108d9565b82525050565b6107c1816108e3565b82525050565b6107d0816108f4565b82525050565b60006020820190506107eb600083018461064c565b92915050565b6000602082019050610806600083018461065b565b92915050565b6000602082019050610821600083018461066a565b92915050565b60006101808201905061083d6000830184610695565b92915050565b600060208201905061085860008301846107a9565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561088157600080fd5b8060405250919050565b6000610896826108b9565b9050919050565b60006fffffffffffffffffffffffffffffffff82169050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600064ffffffffff82169050919050565b600060ff82169050919050565b600061090c82610913565b9050919050565b600061091e826108b9565b9050919050565b600061093082610937565b9050919050565b6000610942826108b9565b9050919050565b6109528161088b565b811461095d57600080fd5b50565b6109698161089d565b811461097457600080fd5b50565b610980816108d9565b811461098b57600080fd5b50565b610997816108e3565b81146109a257600080fd5b50565b6109ae816108f4565b81146109b957600080fd5b5056fea365627a7a723158200a52a598a2d34550e3e7692b5b6363de06b1a5b577a865e6cd5b94f7a243fda66c6578706572696d656e74616cf564736f6c63430005110040",
+  "sourceMap": "389:909:0:-;;;524:251;8:9:-1;5:2;;;30:1;27;20:12;5:2;524:251:0;578:42;555:4;;:66;;;;;;;;;;;;;;;;;;662:42;631:15;;:74;;;;;;;;;;;;;;;;;;726:42;715:8;;:53;;;;;;;;;;;;;;;;;;389:909;;;;;;",
+  "deployedSourceMap": "389:909:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;389:909:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;418:27;;;:::i;:::-;;;;;;;;;;;;;;;;781:162;;;:::i;:::-;;;;;;;;;;;;;;;;949:323;;;:::i;:::-;;;;;;;;;;;;;;;;492:23;;;:::i;:::-;;;;;;;;;;;;;;;;451:35;;;:::i;:::-;;;;;;;;;;;;;;;;418:27;;;;;;;;;;;;;:::o;781:162::-;838:4;854:18;875:4;;;;;;;;;;;:23;;;:25;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;875:25:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;875:25:0;;;;;;;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;875:25:0;;;;;;;;;854:46;;918:13;911:20;;;781:162;:::o;949:323::-;993:28;;:::i;:::-;1033:33;;:::i;:::-;1165:15;;;;;;;;;;;:30;;;1196:8;;;;;;;;;;;1165:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1165:40:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1165:40:0;;;;;;;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;1165:40:0;;;;;;;;;1158:47;;1225:4;1218:11;;;949:323;:::o;492:23::-;;;;;;;;;;;;;:::o;451:35::-;;;;;;;;;;;;;:::o;389:909::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;:::o;5:134:-1:-;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;193:358;;331:4;319:9;314:3;310:19;306:30;303:2;;;349:1;346;339:12;303:2;367:20;382:4;367:20;;;358:29;;437:1;469:60;525:3;516:6;505:9;501:22;469:60;;;462:4;455:5;451:16;444:86;397:144;297:254;;;;;593:2283;;723:6;711:9;706:3;702:19;698:32;695:2;;;743:1;740;733:12;695:2;761:22;776:6;761:22;;;752:31;;842:1;874:98;968:3;959:6;948:9;944:22;874:98;;;867:4;860:5;856:16;849:124;793:191;1044:2;1077:60;1133:3;1124:6;1113:9;1109:22;1077:60;;;1070:4;1063:5;1059:16;1052:86;994:155;1214:2;1247:60;1303:3;1294:6;1283:9;1279:22;1247:60;;;1240:4;1233:5;1229:16;1222:86;1159:160;1385:2;1418:60;1474:3;1465:6;1454:9;1450:22;1418:60;;;1411:4;1404:5;1400:16;1393:86;1329:161;1561:3;1595:60;1651:3;1642:6;1631:9;1627:22;1595:60;;;1588:4;1581:5;1577:16;1570:86;1500:167;1736:3;1770:60;1826:3;1817:6;1806:9;1802:22;1770:60;;;1763:4;1756:5;1752:16;1745:86;1677:165;1907:3;1941:59;1996:3;1987:6;1976:9;1972:22;1941:59;;;1934:4;1927:5;1923:16;1916:85;1852:160;2071:3;2105:60;2161:3;2152:6;2141:9;2137:22;2105:60;;;2098:4;2091:5;2087:16;2080:86;2022:155;2245:3;2281:60;2337:3;2328:6;2317:9;2313:22;2281:60;;;2272:6;2265:5;2261:18;2254:88;2187:166;2423:3;2459:60;2515:3;2506:6;2495:9;2491:22;2459:60;;;2450:6;2443:5;2439:18;2432:88;2363:168;2604:3;2640:60;2696:3;2687:6;2676:9;2672:22;2640:60;;;2631:6;2624:5;2620:18;2613:88;2541:171;2760:3;2796:58;2850:3;2841:6;2830:9;2826:22;2796:58;;;2787:6;2780:5;2776:18;2769:86;2722:144;689:2187;;;;;2883:134;;2967:6;2961:13;2952:22;;2979:33;3006:5;2979:33;;;2946:71;;;;;3024:134;;3108:6;3102:13;3093:22;;3120:33;3147:5;3120:33;;;3087:71;;;;;3165:132;;3248:6;3242:13;3233:22;;3260:32;3286:5;3260:32;;;3227:70;;;;;3304:130;;3386:6;3380:13;3371:22;;3398:31;3423:5;3398:31;;;3365:69;;;;;3441:324;;3586:3;3574:9;3565:7;3561:23;3557:33;3554:2;;;3603:1;3600;3593:12;3554:2;3638:1;3655:94;3741:7;3732:6;3721:9;3717:22;3655:94;;;3645:104;;3617:138;3548:217;;;;;3772:263;;3887:2;3875:9;3866:7;3862:23;3858:32;3855:2;;;3903:1;3900;3893:12;3855:2;3938:1;3955:64;4011:7;4002:6;3991:9;3987:22;3955:64;;;3945:74;;3917:108;3849:186;;;;;4042:103;4115:24;4133:5;4115:24;;;4110:3;4103:37;4097:48;;;4152:113;4235:24;4253:5;4235:24;;;4230:3;4223:37;4217:48;;;4272:176;4380:62;4436:5;4380:62;;;4375:3;4368:75;4362:86;;;4455:170;4560:59;4613:5;4560:59;;;4555:3;4548:72;4542:83;;;4723:342;4886:4;4881:3;4877:14;4969:4;4962:5;4958:16;4952:23;4981:63;5038:4;5033:3;5029:14;5015:12;4981:63;;;4906:144;4859:206;;;;5139:2291;5292:6;5287:3;5283:16;5386:4;5379:5;5375:16;5369:23;5398:143;5535:4;5530:3;5526:14;5512:12;5398:143;;;5314:233;5630:4;5623:5;5619:16;5613:23;5642:63;5699:4;5694:3;5690:14;5676:12;5642:63;;;5557:154;5799:4;5792:5;5788:16;5782:23;5811:63;5868:4;5863:3;5859:14;5845:12;5811:63;;;5721:159;5969:4;5962:5;5958:16;5952:23;5981:63;6038:4;6033:3;6029:14;6015:12;5981:63;;;5890:160;6144:4;6137:5;6133:16;6127:23;6156:63;6213:4;6208:3;6204:14;6190:12;6156:63;;;6060:165;6317:4;6310:5;6306:16;6300:23;6329:63;6386:4;6381:3;6377:14;6363:12;6329:63;;;6235:163;6486:4;6479:5;6475:16;6469:23;6498:61;6553:4;6548:3;6544:14;6530:12;6498:61;;;6408:157;6647:4;6640:5;6636:16;6630:23;6659:63;6716:4;6711:3;6707:14;6693:12;6659:63;;;6575:153;6819:6;6812:5;6808:18;6802:25;6833:65;6890:6;6885:3;6881:16;6867:12;6833:65;;;6738:166;6997:6;6990:5;6986:18;6980:25;7011:65;7068:6;7063:3;7059:16;7045:12;7011:65;;;6914:168;7178:6;7171:5;7167:18;7161:25;7192:65;7249:6;7244:3;7240:16;7226:12;7192:65;;;7092:171;7334:6;7327:5;7323:18;7317:25;7348:61;7401:6;7396:3;7392:16;7378:12;7348:61;;;7273:142;5265:2165;;;;7437:103;7510:24;7528:5;7510:24;;;7505:3;7498:37;7492:48;;;7547:103;7620:24;7638:5;7620:24;;;7615:3;7608:37;7602:48;;;7657:113;7740:24;7758:5;7740:24;;;7735:3;7728:37;7722:48;;;7777:100;7848:23;7865:5;7848:23;;;7843:3;7836:36;7830:47;;;7884:97;7953:22;7969:5;7953:22;;;7948:3;7941:35;7935:46;;;7988:213;;8106:2;8095:9;8091:18;8083:26;;8120:71;8188:1;8177:9;8173:17;8164:6;8120:71;;;8077:124;;;;;8208:263;;8351:2;8340:9;8336:18;8328:26;;8365:96;8458:1;8447:9;8443:17;8434:6;8365:96;;;8322:149;;;;;8478:257;;8618:2;8607:9;8603:18;8595:26;;8632:93;8722:1;8711:9;8707:17;8698:6;8632:93;;;8589:146;;;;;8742:334;;8920:3;8909:9;8905:19;8897:27;;8935:131;9063:1;9052:9;9048:17;9039:6;8935:131;;;8891:185;;;;;9083:213;;9201:2;9190:9;9186:18;9178:26;;9215:71;9283:1;9272:9;9268:17;9259:6;9215:71;;;9172:124;;;;;9303:256;;9365:2;9359:9;9349:19;;9403:4;9395:6;9391:17;9502:6;9490:10;9487:22;9466:18;9454:10;9451:34;9448:62;9445:2;;;9523:1;9520;9513:12;9445:2;9543:10;9539:2;9532:22;9343:216;;;;;9566:91;;9628:24;9646:5;9628:24;;;9617:35;;9611:46;;;;9664:113;;9737:34;9730:5;9726:46;9715:57;;9709:68;;;;9784:121;;9857:42;9850:5;9846:54;9835:65;;9829:76;;;;9912:72;;9974:5;9963:16;;9957:27;;;;9991:90;;10063:12;10056:5;10052:24;10041:35;;10035:46;;;;10088:81;;10159:4;10152:5;10148:16;10137:27;;10131:38;;;;10176:171;;10280:62;10336:5;10280:62;;;10267:75;;10261:86;;;;10354:133;;10458:24;10476:5;10458:24;;;10445:37;;10439:48;;;;10494:165;;10595:59;10648:5;10595:59;;;10582:72;;10576:83;;;;10666:130;;10767:24;10785:5;10767:24;;;10754:37;;10748:48;;;;10803:117;10872:24;10890:5;10872:24;;;10865:5;10862:35;10852:2;;10911:1;10908;10901:12;10852:2;10846:74;;10927:117;10996:24;11014:5;10996:24;;;10989:5;10986:35;10976:2;;11035:1;11032;11025:12;10976:2;10970:74;;11051:117;11120:24;11138:5;11120:24;;;11113:5;11110:35;11100:2;;11159:1;11156;11149:12;11100:2;11094:74;;11175:115;11243:23;11260:5;11243:23;;;11236:5;11233:34;11223:2;;11281:1;11278;11271:12;11223:2;11217:73;;11297:113;11364:22;11380:5;11364:22;;;11357:5;11354:33;11344:2;;11401:1;11398;11391:12;11344:2;11338:72;",
+  "source": "pragma solidity ^0.5.16;\npragma experimental ABIEncoderV2;\n\nimport \"../protocols/compound-protocol/contracts/CTokenInterfaces.sol\";\nimport \"../protocols/aave-protocol/contracts/lendingpool/LendingPool.sol\";\nimport {ILendingPool} from \"@aave/protocol-v2/contracts/interfaces/ILendingPool.sol\";\nimport {DataTypes} from '@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol';\n\n\ncontract MainContract {\n\n    CTokenInterface public cDai;\n    ILendingPool public aaveLendingPool;\n    address public daiToken;\n\n\n\n    constructor() public {\n        cDai = CTokenInterface(0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643);\n        aaveLendingPool = ILendingPool(0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9);\n        daiToken = 0x6B175474E89094C44Da98b954EedeAC495271d0F;\n    }\n\n    function getCompoundDaiSupplyRate() public view returns (uint) {\n        uint daiSupplyRate = cDai.supplyRatePerBlock(); \n        return daiSupplyRate;\n    \n    }\n\n    function getAaveRate() public view returns (DataTypes.ReserveData memory) {\n        DataTypes.ReserveData memory data;\n        // (,,,,uint reserve,,,,,,,,) = aaveLendingPool.getReserveData(daiToken);\n        data = aaveLendingPool.getReserveData(daiToken);\n \n\n        return data;\n        // return aaveLendingPool;\n\n    }\n        \n    \n    \n    \n}",
+  "sourcePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/contracts/MainContract.sol",
+  "ast": {
+    "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/contracts/MainContract.sol",
+    "exportedSymbols": {
+      "MainContract": [
+        69
+      ]
+    },
+    "id": 70,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:0"
+      },
+      {
+        "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/CTokenInterfaces.sol",
+        "file": "../protocols/compound-protocol/contracts/CTokenInterfaces.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 10688,
+        "src": "60:71:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPool.sol",
+        "file": "../protocols/aave-protocol/contracts/lendingpool/LendingPool.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 2600,
+        "src": "132:74:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aave/protocol-v2/contracts/interfaces/ILendingPool.sol",
+        "file": "@aave/protocol-v2/contracts/interfaces/ILendingPool.sol",
+        "id": 6,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 11337,
+        "src": "207:85:0",
+        "symbolAliases": [
+          {
+            "foreign": 5,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol",
+        "file": "@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol",
+        "id": 8,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 11525,
+        "src": "293:93:0",
+        "symbolAliases": [
+          {
+            "foreign": 7,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 69,
+        "linearizedBaseContracts": [
+          69
+        ],
+        "name": "MainContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10,
+            "name": "cDai",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "418:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+              "typeString": "contract CTokenInterface"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 9,
+              "name": "CTokenInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 10582,
+              "src": "418:15:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+                "typeString": "contract CTokenInterface"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 12,
+            "name": "aaveLendingPool",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "451:35:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ILendingPool_$11336",
+              "typeString": "contract ILendingPool"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11,
+              "name": "ILendingPool",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11336,
+              "src": "451:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ILendingPool_$11336",
+                "typeString": "contract ILendingPool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14,
+            "name": "daiToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "492:23:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 13,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "492:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33,
+              "nodeType": "Block",
+              "src": "545:230:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 17,
+                      "name": "cDai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "555:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+                        "typeString": "contract CTokenInterface"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "307835643361353336453444364462443631313463633145616433353737376241423934384533363433",
+                          "id": 19,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "578:42:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          "value": "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 18,
+                        "name": "CTokenInterface",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10582,
+                        "src": "562:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_CTokenInterface_$10582_$",
+                          "typeString": "type(contract CTokenInterface)"
+                        }
+                      },
+                      "id": 20,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "562:59:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+                        "typeString": "contract CTokenInterface"
+                      }
+                    },
+                    "src": "555:66:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+                      "typeString": "contract CTokenInterface"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "555:66:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "aaveLendingPool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "631:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ILendingPool_$11336",
+                        "typeString": "contract ILendingPool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "307837643237363864453332623062383062376133343534633036426441633934413639444463374139",
+                          "id": 25,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "662:42:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          "value": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "ILendingPool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11336,
+                        "src": "649:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ILendingPool_$11336_$",
+                          "typeString": "type(contract ILendingPool)"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "649:56:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ILendingPool_$11336",
+                        "typeString": "contract ILendingPool"
+                      }
+                    },
+                    "src": "631:74:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ILendingPool_$11336",
+                      "typeString": "contract ILendingPool"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "631:74:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 29,
+                      "name": "daiToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "715:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "307836423137353437344538393039344334344461393862393534456564654143343935323731643046",
+                      "id": 30,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "726:42:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      },
+                      "value": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+                    },
+                    "src": "715:53:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 32,
+                  "nodeType": "ExpressionStatement",
+                  "src": "715:53:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 34,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "535:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "545:0:0"
+            },
+            "scope": 69,
+            "src": "524:251:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "844:99:0",
+              "statements": [
+                {
+                  "assignments": [
+                    40
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 40,
+                      "name": "daiSupplyRate",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 47,
+                      "src": "854:18:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 39,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "854:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 44,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 41,
+                        "name": "cDai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "875:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CTokenInterface_$10582",
+                          "typeString": "contract CTokenInterface"
+                        }
+                      },
+                      "id": 42,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "supplyRatePerBlock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10491,
+                      "src": "875:23:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 43,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "875:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "854:46:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "name": "daiSupplyRate",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 40,
+                    "src": "918:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 38,
+                  "id": 46,
+                  "nodeType": "Return",
+                  "src": "911:20:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCompoundDaiSupplyRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "814:2:0"
+            },
+            "returnParameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "838:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "838:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "837:6:0"
+            },
+            "scope": 69,
+            "src": "781:162:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 67,
+              "nodeType": "Block",
+              "src": "1023:249:0",
+              "statements": [
+                {
+                  "assignments": [
+                    56
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 56,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 67,
+                      "src": "1033:33:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                        "typeString": "struct DataTypes.ReserveData"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 55,
+                        "name": "DataTypes.ReserveData",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 11513,
+                        "src": "1033:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ReserveData_$11513_storage_ptr",
+                          "typeString": "struct DataTypes.ReserveData"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 57,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1033:33:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 63,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 58,
+                      "name": "data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 56,
+                      "src": "1158:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                        "typeString": "struct DataTypes.ReserveData memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 61,
+                          "name": "daiToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14,
+                          "src": "1196:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 59,
+                          "name": "aaveLendingPool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12,
+                          "src": "1165:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ILendingPool_$11336",
+                            "typeString": "contract ILendingPool"
+                          }
+                        },
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "getReserveData",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 11299,
+                        "src": "1165:30:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_struct$_ReserveData_$11513_memory_ptr_$",
+                          "typeString": "function (address) view external returns (struct DataTypes.ReserveData memory)"
+                        }
+                      },
+                      "id": 62,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1165:40:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                        "typeString": "struct DataTypes.ReserveData memory"
+                      }
+                    },
+                    "src": "1158:47:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                      "typeString": "struct DataTypes.ReserveData memory"
+                    }
+                  },
+                  "id": 64,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1158:47:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 65,
+                    "name": "data",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 56,
+                    "src": "1225:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                      "typeString": "struct DataTypes.ReserveData memory"
+                    }
+                  },
+                  "functionReturnParameters": 52,
+                  "id": 66,
+                  "nodeType": "Return",
+                  "src": "1218:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 68,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAaveRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "969:2:0"
+            },
+            "returnParameters": {
+              "id": 52,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "993:28:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ReserveData_$11513_memory_ptr",
+                    "typeString": "struct DataTypes.ReserveData"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 50,
+                    "name": "DataTypes.ReserveData",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11513,
+                    "src": "993:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ReserveData_$11513_storage_ptr",
+                      "typeString": "struct DataTypes.ReserveData"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "992:30:0"
+            },
+            "scope": 69,
+            "src": "949:323:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 70,
+        "src": "389:909:0"
+      }
+    ],
+    "src": "0:1298:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/contracts/MainContract.sol",
+      "exportedSymbols": {
+        "MainContract": [
+          69
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 2,
+        "name": "PragmaDirective",
+        "src": "25:33:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 10688,
+          "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/CTokenInterfaces.sol",
+          "file": "../protocols/compound-protocol/contracts/CTokenInterfaces.sol",
+          "scope": 70,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 3,
+        "name": "ImportDirective",
+        "src": "60:71:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2600,
+          "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/aave-protocol/contracts/lendingpool/LendingPool.sol",
+          "file": "../protocols/aave-protocol/contracts/lendingpool/LendingPool.sol",
+          "scope": 70,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 4,
+        "name": "ImportDirective",
+        "src": "132:74:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 11337,
+          "absolutePath": "@aave/protocol-v2/contracts/interfaces/ILendingPool.sol",
+          "file": "@aave/protocol-v2/contracts/interfaces/ILendingPool.sol",
+          "scope": 70,
+          "symbolAliases": [
+            {
+              "foreign": 5,
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 6,
+        "name": "ImportDirective",
+        "src": "207:85:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 11525,
+          "absolutePath": "@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol",
+          "file": "@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol",
+          "scope": 70,
+          "symbolAliases": [
+            {
+              "foreign": 7,
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 8,
+        "name": "ImportDirective",
+        "src": "293:93:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            69
+          ],
+          "name": "MainContract",
+          "scope": 70
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "cDai",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract CTokenInterface",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CTokenInterface",
+                  "referencedDeclaration": 10582,
+                  "type": "contract CTokenInterface"
+                },
+                "id": 9,
+                "name": "UserDefinedTypeName",
+                "src": "418:15:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "418:27:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "aaveLendingPool",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract ILendingPool",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ILendingPool",
+                  "referencedDeclaration": 11336,
+                  "type": "contract ILendingPool"
+                },
+                "id": 11,
+                "name": "UserDefinedTypeName",
+                "src": "451:12:0"
+              }
+            ],
+            "id": 12,
+            "name": "VariableDeclaration",
+            "src": "451:35:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "daiToken",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 13,
+                "name": "ElementaryTypeName",
+                "src": "492:7:0"
+              }
+            ],
+            "id": 14,
+            "name": "VariableDeclaration",
+            "src": "492:23:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 69,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "535:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 16,
+                "name": "ParameterList",
+                "src": "545:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract CTokenInterface"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "contract CTokenInterface",
+                              "value": "cDai"
+                            },
+                            "id": 17,
+                            "name": "Identifier",
+                            "src": "555:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "contract CTokenInterface",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10582,
+                                  "type": "type(contract CTokenInterface)",
+                                  "value": "CTokenInterface"
+                                },
+                                "id": 18,
+                                "name": "Identifier",
+                                "src": "562:15:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "307835643361353336453444364462443631313463633145616433353737376241423934384533363433",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "address payable",
+                                  "value": "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643"
+                                },
+                                "id": 19,
+                                "name": "Literal",
+                                "src": "578:42:0"
+                              }
+                            ],
+                            "id": 20,
+                            "name": "FunctionCall",
+                            "src": "562:59:0"
+                          }
+                        ],
+                        "id": 21,
+                        "name": "Assignment",
+                        "src": "555:66:0"
+                      }
+                    ],
+                    "id": 22,
+                    "name": "ExpressionStatement",
+                    "src": "555:66:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract ILendingPool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "contract ILendingPool",
+                              "value": "aaveLendingPool"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "631:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "contract ILendingPool",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11336,
+                                  "type": "type(contract ILendingPool)",
+                                  "value": "ILendingPool"
+                                },
+                                "id": 24,
+                                "name": "Identifier",
+                                "src": "649:12:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "307837643237363864453332623062383062376133343534633036426441633934413639444463374139",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "address payable",
+                                  "value": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
+                                },
+                                "id": 25,
+                                "name": "Literal",
+                                "src": "662:42:0"
+                              }
+                            ],
+                            "id": 26,
+                            "name": "FunctionCall",
+                            "src": "649:56:0"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "Assignment",
+                        "src": "631:74:0"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "ExpressionStatement",
+                    "src": "631:74:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "address",
+                              "value": "daiToken"
+                            },
+                            "id": 29,
+                            "name": "Identifier",
+                            "src": "715:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "307836423137353437344538393039344334344461393862393534456564654143343935323731643046",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "address payable",
+                              "value": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+                            },
+                            "id": 30,
+                            "name": "Literal",
+                            "src": "726:42:0"
+                          }
+                        ],
+                        "id": 31,
+                        "name": "Assignment",
+                        "src": "715:53:0"
+                      }
+                    ],
+                    "id": 32,
+                    "name": "ExpressionStatement",
+                    "src": "715:53:0"
+                  }
+                ],
+                "id": 33,
+                "name": "Block",
+                "src": "545:230:0"
+              }
+            ],
+            "id": 34,
+            "name": "FunctionDefinition",
+            "src": "524:251:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getCompoundDaiSupplyRate",
+              "scope": 69,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 35,
+                "name": "ParameterList",
+                "src": "814:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 48,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 36,
+                        "name": "ElementaryTypeName",
+                        "src": "838:4:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "VariableDeclaration",
+                    "src": "838:4:0"
+                  }
+                ],
+                "id": 38,
+                "name": "ParameterList",
+                "src": "837:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        40
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "daiSupplyRate",
+                          "scope": 47,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 39,
+                            "name": "ElementaryTypeName",
+                            "src": "854:4:0"
+                          }
+                        ],
+                        "id": 40,
+                        "name": "VariableDeclaration",
+                        "src": "854:18:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "supplyRatePerBlock",
+                              "referencedDeclaration": 10491,
+                              "type": "function () view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "contract CTokenInterface",
+                                  "value": "cDai"
+                                },
+                                "id": 41,
+                                "name": "Identifier",
+                                "src": "875:4:0"
+                              }
+                            ],
+                            "id": 42,
+                            "name": "MemberAccess",
+                            "src": "875:23:0"
+                          }
+                        ],
+                        "id": 43,
+                        "name": "FunctionCall",
+                        "src": "875:25:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "VariableDeclarationStatement",
+                    "src": "854:46:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 38
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 40,
+                          "type": "uint256",
+                          "value": "daiSupplyRate"
+                        },
+                        "id": 45,
+                        "name": "Identifier",
+                        "src": "918:13:0"
+                      }
+                    ],
+                    "id": 46,
+                    "name": "Return",
+                    "src": "911:20:0"
+                  }
+                ],
+                "id": 47,
+                "name": "Block",
+                "src": "844:99:0"
+              }
+            ],
+            "id": 48,
+            "name": "FunctionDefinition",
+            "src": "781:162:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAaveRate",
+              "scope": 69,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 49,
+                "name": "ParameterList",
+                "src": "969:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 68,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct DataTypes.ReserveData",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "DataTypes.ReserveData",
+                          "referencedDeclaration": 11513,
+                          "type": "struct DataTypes.ReserveData"
+                        },
+                        "id": 50,
+                        "name": "UserDefinedTypeName",
+                        "src": "993:21:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "VariableDeclaration",
+                    "src": "993:28:0"
+                  }
+                ],
+                "id": 52,
+                "name": "ParameterList",
+                "src": "992:30:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        56
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "data",
+                          "scope": 67,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct DataTypes.ReserveData",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "DataTypes.ReserveData",
+                              "referencedDeclaration": 11513,
+                              "type": "struct DataTypes.ReserveData"
+                            },
+                            "id": 55,
+                            "name": "UserDefinedTypeName",
+                            "src": "1033:21:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "VariableDeclaration",
+                        "src": "1033:33:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1033:33:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct DataTypes.ReserveData memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 56,
+                              "type": "struct DataTypes.ReserveData memory",
+                              "value": "data"
+                            },
+                            "id": 58,
+                            "name": "Identifier",
+                            "src": "1158:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct DataTypes.ReserveData memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "getReserveData",
+                                  "referencedDeclaration": 11299,
+                                  "type": "function (address) view external returns (struct DataTypes.ReserveData memory)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 12,
+                                      "type": "contract ILendingPool",
+                                      "value": "aaveLendingPool"
+                                    },
+                                    "id": 59,
+                                    "name": "Identifier",
+                                    "src": "1165:15:0"
+                                  }
+                                ],
+                                "id": 60,
+                                "name": "MemberAccess",
+                                "src": "1165:30:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 14,
+                                  "type": "address",
+                                  "value": "daiToken"
+                                },
+                                "id": 61,
+                                "name": "Identifier",
+                                "src": "1196:8:0"
+                              }
+                            ],
+                            "id": 62,
+                            "name": "FunctionCall",
+                            "src": "1165:40:0"
+                          }
+                        ],
+                        "id": 63,
+                        "name": "Assignment",
+                        "src": "1158:47:0"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "ExpressionStatement",
+                    "src": "1158:47:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 52
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 56,
+                          "type": "struct DataTypes.ReserveData memory",
+                          "value": "data"
+                        },
+                        "id": 65,
+                        "name": "Identifier",
+                        "src": "1225:4:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "Return",
+                    "src": "1218:11:0"
+                  }
+                ],
+                "id": 67,
+                "name": "Block",
+                "src": "1023:249:0"
+              }
+            ],
+            "id": 68,
+            "name": "FunctionDefinition",
+            "src": "949:323:0"
+          }
+        ],
+        "id": 69,
+        "name": "ContractDefinition",
+        "src": "389:909:0"
+      }
+    ],
+    "id": 70,
+    "name": "SourceUnit",
+    "src": "0:1298:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0xc4dbd8B5Aa87EB02dF514816608262aCEf542494",
+      "transactionHash": "0xdf0056b89cc1606bc0e1d8536645d0a1a63e5ed347f2186619ded04d7c5cc4d3"
+    }
+  },
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-09-20T17:12:03.694Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

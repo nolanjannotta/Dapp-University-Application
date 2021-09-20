@@ -1,14 +1,15 @@
 import { useState } from "react"
 import Web3 from 'web3';
-import daiABI from "../../ABIs/daiABI.json";
+import MainContractABI from "../../ABIs/MainContractABI.json";
 
 
 
 
 const useContract = () => {
     const web3 = new Web3(window.ethereum)
-    const daiAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
-    const daiContract = new web3.eth.Contract(daiABI, daiAddress)
+    const contractAddress = "0xc4dbd8B5Aa87EB02dF514816608262aCEf542494"
+    console.log(MainContractABI)
+    const MainContract = new web3.eth.Contract(MainContractABI, contractAddress)
 
 
     const [loading, setLoading] = useState(true)
@@ -16,7 +17,7 @@ const useContract = () => {
     
     
     
-    return {daiContract, loading, setLoading, data, setData, web3}
+    return {MainContract, loading, setLoading, data, setData, web3}
 }
 
 export default useContract

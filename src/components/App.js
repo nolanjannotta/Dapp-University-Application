@@ -3,7 +3,7 @@ import logo from '../logo.png';
 import styled from "styled-components"
 import './App.css';
 import ChainData from "./header/ChainData"
-import SupplyAPY from './hooks/SupplyAPY';
+import SupplyAPY from './SupplyAPY.js';
 
 const App = () => {
   
@@ -22,7 +22,7 @@ const App = () => {
       </Navbar>
       
       <SupplyAPY>
-        
+
       </SupplyAPY>
       </div> 
         
