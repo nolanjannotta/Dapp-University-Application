@@ -1,6 +1,22 @@
 [
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_cDai",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_LendingPool",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_daiAddress",
+          "type": "address"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
@@ -38,10 +54,55 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "daiToken",
+      "name": "cDaiAddress",
       "outputs": [
         {
           "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cDaiInterface",
+      "outputs": [
+        {
+          "internalType": "contract CErc20Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "daiAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "daiToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
           "name": "",
           "type": "address"
         }
@@ -147,6 +208,36 @@
       ],
       "payable": false,
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositCompound",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositAave",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ]

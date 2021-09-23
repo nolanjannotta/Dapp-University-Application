@@ -6,31 +6,39 @@ import ChainData from "./header/ChainData"
 import SupplyAPY from './SupplyAPY.js';
 
 const App = () => {
+
+  // if (window.ethereum !== null) {
+  //   return
+  // } else if {
+  //   alert("no metamask")
+  // }
   
   return (
-      <div>
-      
-      
-        <Navbar>
-          <div>
-           Dapp University Application 
-          </div>
-          <ChainData>
+    <div>
 
-          </ChainData>
-          
+      <Navbar>
+        <div>Dapp University Application </div>
+        <ChainData></ChainData>
       </Navbar>
       
-      <SupplyAPY>
 
-      </SupplyAPY>
-      </div> 
+      <Container>  
+        <SupplyAPY></SupplyAPY>
         
+      
+      </Container> 
+    </div>    
     );
   
 }
 
 export default App;
+
+const Container = styled.div`
+  display: flex;
+  margin: auto;
+  justify-content: center;
+`
 
 const Navbar = styled.div`
     background-color: pink;

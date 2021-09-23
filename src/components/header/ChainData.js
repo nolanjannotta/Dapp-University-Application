@@ -7,22 +7,22 @@ function ChainData() {
     // const [address, setAddress] = useState("")
     const { daiContract, data, setData, web3 } = useContract({})
 
-    const loadDai = async() => {
+    // const loadDai = async() => {
 
-        daiContract.methods.balanceOf(window.ethereum.selectedAddress.toString()).call((error, result) => {
-            result ? setData({
-                ...data,
-                daiBalance: web3.utils.fromWei(result).toString()
-            })
-                : console.log(error)
-        })
-        const ethBalance = await web3.eth.getBalance(window.ethereum.selectedAddress.toString())
-        setData({
-            ...data,
-            ethBalance: web3.utils.fromWei(ethBalance)
-        })
+    //     daiContract.methods.balanceOf(window.ethereum.selectedAddress.toString()).call((error, result) => {
+    //         result ? setData({
+    //             ...data,
+    //             daiBalance: web3.utils.fromWei(result).toString()
+    //         })
+    //             : console.log(error)
+    //     })
+    //     const ethBalance = await web3.eth.getBalance(window.ethereum.selectedAddress.toString())
+    //     setData({
+    //         ...data,
+    //         ethBalance: web3.utils.fromWei(ethBalance)
+    //     })
         
-    }
+    // }
     // loadDai()
 
 
@@ -75,6 +75,7 @@ function ChainData() {
             ...data,
             address: truncate(window.ethereum.selectedAddress)
         })
+
        
     }
 
@@ -92,11 +93,10 @@ function ChainData() {
     return (
         <Box>
             <div>
-                {/* Available DAI Balance: {data.daiBalance} */}
             </div>
 
-            {data.address}
-            <Button onClick={connect}>{window.ethereum.selectedAddress === null ? ("Connect") : ("Connected 🤙")}</Button>
+            {/* {window.ethereum.selectedAddress !== null && data.address} */}
+            <Button onClick={connect}>{window.ethereum.selectedAddress === null ? <div>Connect</div> : <div>{data.address} Connected</div>}</Button>
         </Box>
     )
 }
