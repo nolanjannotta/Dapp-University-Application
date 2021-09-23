@@ -9,7 +9,8 @@ the deposit functions do not work as of writing this. I get strange errors that 
 
 
 Things to try:
-deploy this application to a test net, see if it gives different results.
+
+deploy this smart contract to a test net, see if it gives different results.
 
 
 
