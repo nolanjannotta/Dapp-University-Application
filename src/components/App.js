@@ -4,16 +4,13 @@ import styled from "styled-components"
 import './App.css';
 import ChainData from "./header/ChainData"
 import SupplyAPY from './SupplyAPY.js';
+import ViaFrontEnd from "./ViaFrontEnd.js"
 
 const App = () => {
 
-  // if (window.ethereum !== null) {
-  //   return
-  // } else if {
-  //   alert("no metamask")
-  // }
   
   return (
+
     <div>
 
       <Navbar>
@@ -24,9 +21,12 @@ const App = () => {
 
       <Container>  
         <SupplyAPY></SupplyAPY>
+        <ViaFrontEnd></ViaFrontEnd>
         
       
-      </Container> 
+      </Container>
+      
+      
     </div>    
     );
   
@@ -36,8 +36,10 @@ export default App;
 
 const Container = styled.div`
   display: flex;
+  /* pdding: 10px; */
+  /* padding: 25px 50px; */
   margin: auto;
-  justify-content: center;
+  justify-content: space-evenly;
 `
 
 const Navbar = styled.div`
