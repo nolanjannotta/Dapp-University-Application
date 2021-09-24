@@ -13,6 +13,9 @@ import {DataTypes} from '@aave/protocol-v2/contracts/protocol/libraries/types/Da
 contract MainContract {
     // TRY THIS
     // using SafeERC20Upgradeable for IERC20Upgradeable;
+
+    mapping(address => uint) public userToDaiBalance;
+    
     
     CTokenInterface public cDai;
     // CErc20Interface public cDaiInterface;
@@ -33,9 +36,18 @@ contract MainContract {
         daiAddress = _daiAddress;        
         daiToken = IERC20(_daiAddress);
 
-        // APY FUNCTIONS
+        // FUND CONTRACT WITH DAI
 
     }
+    function fundContract(uint amount) public {
+        // address user = msg.sender;
+        require(daiToken.transferFrom(msg.sender, address(this), (amount)), "DAI Transfer failed!");
+        userToDaiBalance[msg.sender] += amount;
+    }
+
+        // APY FUNCTIONS
+
+   
 
     function getCompoundDaiSupplyRate() public view returns (uint) {
         uint daiSupplyRate = cDai.supplyRatePerBlock(); 
@@ -50,24 +62,45 @@ contract MainContract {
 
     }
 
+
+    
+
+   
     // DEPOSIT FUNCTIONS
     function depositCompound(uint amount) public {
-        daiToken.approve(address(cDaiAddress), amount);
+                // UNTESTED CODE
+        uint cDaiBalance = (cDai.exchangeRateCurrent()) * amount;
+
+
+        daiToken.approve(address(cDaiAddress), (amount)); 
+        userToDaiBalance[msg.sender] -= amount;  
+
         cDai.mint(amount);
 
-        // ^^^always returns "Revert Dai/insufficient balance" no explanation
-
-
     }
-   
+
+    
     
     function depositAave(uint amount) public  {
         address user = msg.sender;
         daiToken.approve(address(aaveLendingPool), amount);
-
-        require(daiToken.transferFrom(user, address(this), amount), "DAI Transfer failed!");
-        aaveLendingPool.deposit(daiAddress, amount, user, 0);
+        userToDaiBalance[msg.sender] -= amount; 
+        aaveLendingPool.deposit(daiAddress, (amount), address(this), 0);
     
     }
+    // WITHDRAW FUNCTIONS
+
+    function withdrawCompound(uint amount) public {
+        cDai.redeem(amount);
+        userToDaiBalance[msg.sender] += amount;
+    }
+
+    function withdrawAave() public {
+        uint newBalance = aaveLendingPool.withdraw(address(daiToken), uint256(-1), address(this));
+
+        userToDaiBalance[msg.sender] += newBalance;
+
+    }
+
 
 }
