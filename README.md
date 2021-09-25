@@ -27,7 +27,7 @@ then, to deploy the contract, paste this:
 
 at this point youll probably run into some errors, to fix them, remane the open zeppelin node module folder from "@openzeppelin/contracts" to "openzeppelin-solidity"
 
-theres also probably some errors about solidity versions, to fix them we need to change the solidity version to "^0.5.16" in (i believe) 3 files; ILendingPool.sol, DataTypes.sol and ILendingPoolAddressesProvider.sol, all in the @aave node module. the errors will tell you exactly where they are. (in hinesight, probably easier to put these files in their own contracts folder) you might also see "Duplicate contract names" warnings, these im not sure about, but it should still compile and deploy, if not, reach out to me.
+theres also probably some errors about solidity versions, to fix them we need to change the solidity version to "^0.5.16" in (i believe) 3 files; ILendingPool.sol, DataTypes.sol and ILendingPoolAddressesProvider.sol, all in the @aave node module. the errors will tell you exactly where they are. (in hindsight, probably easier to put these files in their own contracts folder) you might also see "Duplicate contract names" warnings, these im not sure about, but it should still compile and deploy, if not, reach out to me.
 
 next, paste this into a new terminal window: 
 
