@@ -1,8 +1,8 @@
 pragma solidity ^0.5.16;
 
-import "../protocols/compound-protocol/contracts/ComptrollerInterface.sol";
-import "../protocols/compound-protocol/contracts/InterestRateModel.sol";
-import "../protocols/compound-protocol/contracts/EIP20NonStandardInterface.sol";
+import "../compound_contracts/contracts/ComptrollerInterface.sol";
+import "../compound_contracts/contracts/InterestRateModel.sol";
+import "../compound_contracts/contracts/EIP20NonStandardInterface.sol";
 
 
 contract CTokenInterface  {
