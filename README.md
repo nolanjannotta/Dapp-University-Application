@@ -53,6 +53,8 @@ all thats left now is to navigate back to the app page, click on connect on the 
 
 and voilà, if all went according to plan you should have the app up and running and ready to interact with.
 
+video walk though: https://drive.google.com/file/d/1gN34SX_U0FEtQYL-b4eCi6FDOS8Y3R9a/view?usp=sharing
+
 
 
 
