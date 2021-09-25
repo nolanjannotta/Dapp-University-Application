@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import logo from '../logo.png';
+import React from 'react';
 import styled from "styled-components"
-import './App.css';
-import ChainData from "./header/ChainData"
-import SupplyAPY from './SupplyAPY.js';
-import ViaFrontEnd from "./ViaFrontEnd.js"
+import Address from './header/Address'
+import Deposit from './Deposit.js';
+import Dashboard from './Dashboard.js'
 
 const App = () => {
 
@@ -15,13 +13,13 @@ const App = () => {
 
       <Navbar>
         <div>Dapp University Application </div>
-        <ChainData></ChainData>
+        <Address></Address>
       </Navbar>
       
 
       <Container>  
-        <SupplyAPY></SupplyAPY>
-        <ViaFrontEnd></ViaFrontEnd>
+        <Deposit></Deposit>
+        <Dashboard></Dashboard>
         
       
       </Container>

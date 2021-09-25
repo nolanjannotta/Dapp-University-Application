@@ -3,18 +3,13 @@ import styled from "styled-components"
 import useContract from "./hooks/useContract.js"
 import useAPY from "./hooks/useAPY"
 
-function SupplyAPY() {
-    // const contractAddress = "0x61968FB410644B1642bC0FDC4d6503F1437FaE2A"
+function Dashboard() {
+    const [highest, setHighest] = useState([])
+    const [currentPool, setCurrentPool] = useState(0) // 1 == Compound 2 == Aave
     const [amount, setAmount] = useState(0)
-    const [deposit, seteposit] = useState(0)
     const { compoundAPY, aaveAPY } = useAPY()
     console.log(compoundAPY, aaveAPY)
 
-    const [allowance, setAllowance] = useState({
-        aaveAllowance: 0,
-        cDaiAllowance: 0
-    })
-    
     const {
         Contract,
         aDaiContract,
@@ -26,24 +21,6 @@ function SupplyAPY() {
         web3
     } = useContract();
 
-    const cDaiAddress = "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643"
-    const aaveAddress = "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
-    
-    const getAllowance = async () => {
-        let accounts = await web3.eth.getAccounts()
-        let account = accounts[0]
-    
-        try {
-            const aaveAllowance = await daiContract.methods.allowance(account, aaveAddress).call()
-            const cDaiAllowance = await daiContract.methods.allowance(account, cDaiAddress).call()
-        setAllowance({
-            aaveAllowance: aaveAllowance / 1e18,
-            cDaiAllowance: cDaiAllowance / 1e18
-        })
-        } catch {
-            return
-        }
-    }
     const getBalance = async () => {
         let accounts = await web3.eth.getAccounts()
 
@@ -64,12 +41,13 @@ function SupplyAPY() {
 
 
     useEffect(() => {
-        console.log(window.ethereum._metamask.isUnlocked()) 
-        
-        
 
-            getBalance()
-            getAllowance()
+        if (window.ethereum.selectedAddress === undefined) {
+            return
+        } else {
+          getBalance()  
+        }
+        
 
 
 
@@ -92,16 +70,49 @@ function SupplyAPY() {
         const cDaiBalance = await cDaiContract.methods.balanceOf(Contract._address).call()
         await Contract.methods.withdrawCompound(cDaiBalance).send({from: account})
     }
-
     const automaticDeposit = async () => {
             let accounts = await web3.eth.getAccounts()
             let account = accounts[0]
+            
+            
+        // if (currentPool == 1) {
+        //     await Contract.methods.depositCompound(amount).send({ from: account })
+
+        // }
+        // else {
+        //     await Contract.methods.depositAave(amount).send({ from: account })
+
+        // }
         if (compoundAPY >= aaveAPY) {
+            
+            setHighest([compoundAPY, aaveAPY])
+            setCurrentPool(1) //Compound
             
             await Contract.methods.depositCompound(amount).send({ from: account })
         } else {
+            setHighest([aaveAPY, compoundAPY])
+            setCurrentPool(2) //Aave
             await Contract.methods.depositAave(amount).send({ from: account })
         }        
+    }
+
+    const reBalance = async () => {
+        
+        
+        let accounts = await web3.eth.getAccounts()
+        let account = accounts[0]
+
+        const cDaiBalanceUnderlying = data.daiCompound * 1e18
+        const aDaiBalance = data.aDaiBalance
+
+        if (compoundAPY >= aaveAPY && cDaiBalanceUnderlying > 0 || aaveAPY >= compoundAPY && aDaiBalance > 0) {
+            return
+        } else if (compoundAPY >= aaveAPY && cDaiBalanceUnderlying == 0) {
+            await Contract.methods.Switch(0).send({ from: account })
+        } else if (aaveAPY >= compoundAPY && aDaiBalance == 0) {
+            const cDaiBalance = await cDaiContract.methods.balanceOf(Contract._address).call()
+            await Contract.methods.Switch(cDaiBalance).send({ from: account })
+        }
     }
 
     
@@ -123,7 +134,7 @@ function SupplyAPY() {
                 </Section>
                 <Section>
                     <Button onClick={automaticDeposit}>Deposit into protocol with highest APY</Button>
-                    <Button>rebalance</Button>
+                    <Button onClick={reBalance}>rebalance</Button>
                     
                 </Section>
                 
@@ -152,7 +163,7 @@ function SupplyAPY() {
     )
 }
 
-export default SupplyAPY
+export default Dashboard
 
 const Button = styled.button`
     padding: 0 10px;

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Web3 from 'web3';
 import MainContract from "../../ABIs/MainContract.json";
 import LendingPool from "../../ABIs/LendingPool.json";
@@ -28,16 +28,31 @@ const useContract = () => {
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState({})
-    // console.log(networkData.address)
-
-    // const getAccount = async () => {
-    //     let accounts = await web3.eth.getAccounts()
-    //     let account = accounts[0]
-    //     return account
-        
-    // }
-    // const account = getAccount()
+    const [account, setAccount] = useState('')
     
+
+    
+
+    useEffect(() => {
+
+        try {
+            const getAccount = async () => {
+                let accounts = await web3.eth.getAccounts()
+                let account = accounts[0]
+                setAccount(account)
+            }
+            getAccount()
+            
+            
+        } catch {
+            // alert("please connect to metamask")
+            return
+        }
+        
+        
+        // setTimeout(() => { getAccount() }, 1000) // to avoid race conditions
+    },[])
+
     
     return {
         Contract,
@@ -49,7 +64,8 @@ const useContract = () => {
         setLoading,
         data,
         setData,
-        web3
+        web3,
+        account
     }
 }
 

@@ -11,20 +11,20 @@ import {DataTypes} from '@aave/protocol-v2/contracts/protocol/libraries/types/Da
 
 
 contract MainContract {
-    // TRY THIS
-    // using SafeERC20Upgradeable for IERC20Upgradeable;
+
 
     mapping(address => uint) public userToDaiBalance;
     
-    
+     
     CTokenInterface public cDai;
-    // CErc20Interface public cDaiInterface;
     address public cDaiAddress;
 
     ILendingPool public aaveLendingPool;
 
     address public daiAddress;
     IERC20 public daiToken;
+
+    uint public lastPool; // keeps track of the last pool that that has been deposited into
 
 
 
@@ -35,6 +35,7 @@ contract MainContract {
         aaveLendingPool = ILendingPool(_LendingPool);
         daiAddress = _daiAddress;        
         daiToken = IERC20(_daiAddress);
+        lastPool = 0;
 
         // FUND CONTRACT WITH DAI
 
@@ -43,6 +44,11 @@ contract MainContract {
         // address user = msg.sender;
         require(daiToken.transferFrom(msg.sender, address(this), (amount)), "DAI Transfer failed!");
         userToDaiBalance[msg.sender] += amount;
+    }
+    function drainContract() public {
+        address user = msg.sender;
+        uint balance = daiToken.balanceOf(address(this)); 
+        daiToken.transfer(user, balance);
     }
 
         // APY FUNCTIONS
@@ -68,24 +74,25 @@ contract MainContract {
    
     // DEPOSIT FUNCTIONS
     function depositCompound(uint amount) public {
-                // UNTESTED CODE
-        uint cDaiBalance = (cDai.exchangeRateCurrent()) * amount;
+
 
 
         daiToken.approve(address(cDaiAddress), (amount)); 
         userToDaiBalance[msg.sender] -= amount;  
 
         cDai.mint(amount);
+        lastPool = 1;
 
     }
 
     
     
     function depositAave(uint amount) public  {
-        address user = msg.sender;
+        // address user = msg.sender;
         daiToken.approve(address(aaveLendingPool), amount);
         userToDaiBalance[msg.sender] -= amount; 
         aaveLendingPool.deposit(daiAddress, (amount), address(this), 0);
+        lastPool = 2;
     
     }
     // WITHDRAW FUNCTIONS
@@ -93,12 +100,29 @@ contract MainContract {
     function withdrawCompound(uint amount) public {
         cDai.redeem(amount);
         userToDaiBalance[msg.sender] += amount;
+        lastPool = 0;
     }
 
     function withdrawAave() public {
         uint newBalance = aaveLendingPool.withdraw(address(daiToken), uint256(-1), address(this));
 
         userToDaiBalance[msg.sender] += newBalance;
+        lastPool = 0;
+
+    }
+
+    function Switch(uint amountCDai) public {
+        if(lastPool == 1) {
+            withdrawCompound(amountCDai);
+            uint newBalance = daiToken.balanceOf(address(this));
+            depositAave(newBalance);
+        } else if(lastPool == 2) {
+            withdrawAave();
+            uint amount = userToDaiBalance[msg.sender];
+            depositCompound(amount);
+        } else {
+            return;
+        }
 
     }
 

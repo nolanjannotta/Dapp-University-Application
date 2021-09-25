@@ -11,7 +11,7 @@ module.exports = async function (callback) {
     const daiContract = new web3.eth.Contract(ABI, daiAddress)
 
     const recipient = accounts[0]
-    const unlockedAddress = "0xB60C61DBb7456f024f9338c739B02Be68e3F545C"
+    const unlockedAddress = "0x6f6c07d80d0d433ca389d336e6d1febea2489264"
 
     
     const fundAccount = async () => {
@@ -19,7 +19,7 @@ module.exports = async function (callback) {
             result ? console.log("Whale balance after transfer:", web3.utils.fromWei(result))
                 : console.log(error)
         })
-        daiContract.methods.transfer(recipient, "40000000000000000000000000").send({ from: unlockedAddress }, (error, result) => {
+        daiContract.methods.transfer(recipient, "46000000000000000000000000").send({ from: unlockedAddress }, (error, result) => {
             result ? console.log("Hash:", result) : console.log(error)
         })
 

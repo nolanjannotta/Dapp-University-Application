@@ -698,7 +698,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 231,
-        "sourceUnit": 557,
+        "sourceUnit": 590,
         "src": "26:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -709,7 +709,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 231,
-        "sourceUnit": 652,
+        "sourceUnit": 685,
         "src": "102:72:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -720,7 +720,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 231,
-        "sourceUnit": 622,
+        "sourceUnit": 655,
         "src": "175:80:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2358,7 +2358,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ComptrollerInterface_$556",
+                    "typeIdentifier": "t_contract$_ComptrollerInterface_$589",
                     "typeString": "contract ComptrollerInterface"
                   },
                   "typeName": {
@@ -2366,10 +2366,10 @@
                     "id": 142,
                     "name": "ComptrollerInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 556,
+                    "referencedDeclaration": 589,
                     "src": "1720:20:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ComptrollerInterface_$556",
+                      "typeIdentifier": "t_contract$_ComptrollerInterface_$589",
                       "typeString": "contract ComptrollerInterface"
                     }
                   },
@@ -2603,7 +2603,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_InterestRateModel_$651",
+                    "typeIdentifier": "t_contract$_InterestRateModel_$684",
                     "typeString": "contract InterestRateModel"
                   },
                   "typeName": {
@@ -2611,10 +2611,10 @@
                     "id": 163,
                     "name": "InterestRateModel",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 651,
+                    "referencedDeclaration": 684,
                     "src": "1975:17:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_InterestRateModel_$651",
+                      "typeIdentifier": "t_contract$_InterestRateModel_$684",
                       "typeString": "contract InterestRateModel"
                     }
                   },
@@ -3335,7 +3335,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_EIP20NonStandardInterface_$621",
+                    "typeIdentifier": "t_contract$_EIP20NonStandardInterface_$654",
                     "typeString": "contract EIP20NonStandardInterface"
                   },
                   "typeName": {
@@ -3343,10 +3343,10 @@
                     "id": 225,
                     "name": "EIP20NonStandardInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 621,
+                    "referencedDeclaration": 654,
                     "src": "2609:25:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_EIP20NonStandardInterface_$621",
+                      "typeIdentifier": "t_contract$_EIP20NonStandardInterface_$654",
                       "typeString": "contract EIP20NonStandardInterface"
                     }
                   },
@@ -3400,7 +3400,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 557,
+          "SourceUnit": 590,
           "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/ComptrollerInterface.sol",
           "file": "../protocols/compound-protocol/contracts/ComptrollerInterface.sol",
           "scope": 231,
@@ -3415,7 +3415,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 652,
+          "SourceUnit": 685,
           "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/InterestRateModel.sol",
           "file": "../protocols/compound-protocol/contracts/InterestRateModel.sol",
           "scope": 231,
@@ -3430,7 +3430,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 622,
+          "SourceUnit": 655,
           "absolutePath": "/Users/nolanjannotta/DU/Dapp-University-Application/src/protocols/compound-protocol/contracts/EIP20NonStandardInterface.sol",
           "file": "../protocols/compound-protocol/contracts/EIP20NonStandardInterface.sol",
           "scope": 231,
@@ -5266,7 +5266,7 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ComptrollerInterface",
-                          "referencedDeclaration": 556,
+                          "referencedDeclaration": 589,
                           "type": "contract ComptrollerInterface"
                         },
                         "id": 142,
@@ -5532,7 +5532,7 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "InterestRateModel",
-                          "referencedDeclaration": 651,
+                          "referencedDeclaration": 684,
                           "type": "contract InterestRateModel"
                         },
                         "id": 163,
@@ -6320,7 +6320,7 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "EIP20NonStandardInterface",
-                          "referencedDeclaration": 621,
+                          "referencedDeclaration": 654,
                           "type": "contract EIP20NonStandardInterface"
                         },
                         "id": 225,
@@ -6369,7 +6369,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-09-22T06:44:57.610Z",
+  "updatedAt": "2021-09-23T04:35:01.388Z",
   "devdoc": {
     "methods": {}
   },

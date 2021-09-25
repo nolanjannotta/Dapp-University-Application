@@ -3,7 +3,7 @@ import styled from "styled-components"
 import useContract from "./hooks/useContract.js"
 import useAPY from "./hooks/useAPY"
 
-function SupplyAPY() {
+function Deposit() {
          
 
     
@@ -34,9 +34,15 @@ function SupplyAPY() {
     }
 
 
-    useEffect(() => {        
-        getBalance()
-        getAllowance()
+    useEffect(() => {
+        if (window.ethereum.selectedAddress === undefined) {
+            return
+        } else {
+            getBalance()
+            getAllowance()
+        }
+     
+        
 
     }, [])
 
@@ -47,6 +53,12 @@ function SupplyAPY() {
         console.log("hello")
         const dai = await Contract.methods.depositAave(amount).send({ from: account })
         console.log(dai)
+    }
+
+    const withdrawDaiFromContract = async () => {
+        await Contract.methods.drainContract().send({ from: account })
+        getBalance()
+
     }
 
 
@@ -114,16 +126,6 @@ function SupplyAPY() {
                     </input>
                     
                 </Section>
-                
-                
-                {/* <i>
-                    you have {allowance.aaveAllowance} DAI approved for Aave
-                <br></br>
-                    you have {allowance.cDaiAllowance} DAI approved for Cdai
-                    
-   
-                </i> */}
-
                         
                    
                 <Section>
@@ -132,10 +134,11 @@ function SupplyAPY() {
                 <Button onClick={() => { fundContract(amount) }}>fund contract </Button>
    
                 </Section>
-                <Italic>Wallet Dai Balance: {(data.walletDai / 1000000000000000000)}</Italic>
-
+                <Italic>Wallet Dai Balance: {(data.walletDai / 1e18)}</Italic>
+                
                 <br/>
-                <Italic>Deposited Dai Balance: {(data.contractDai / 1000000000000000000)}</Italic>
+                <Italic>Deposited Dai Balance: {(data.contractDai / 1e18)}</Italic>
+                <TextButton onClick={withdrawDaiFromContract}>withdraw</TextButton>
                 <br/>
                 <Italic>{allowance} approved</Italic>
             
@@ -170,7 +173,7 @@ function SupplyAPY() {
     )
 }
 
-export default SupplyAPY
+export default Deposit
 
 const Button = styled.button`
     padding: 0 10px;
@@ -186,18 +189,18 @@ const TextButton = styled.button`
 
 
 const Box = styled.div`
-margin-top: 20px;
-width: 500px;
-height: 700px;
-background-color: pink;
-/* display: flex; */
-/* align-items: center; */
+    margin-top: 20px;
+    width: 500px;
+    height: 700px;
+    background-color: pink;
+    /* display: flex; */
+    /* align-items: center; */
 
 `
 const Data = styled.i`
-position: relative;
-/* width: 20px; */
-/* padding: 5px; */
+    position: relative;
+    /* width: 20px; */
+    /* padding: 5px; */
 
 `
 
