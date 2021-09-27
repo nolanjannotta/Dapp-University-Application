@@ -61,8 +61,6 @@ video walk though: https://drive.google.com/file/d/1gN34SX_U0FEtQYL-b4eCi6FDOS8Y
 
 
 
-
-
 Things to improve:
 
 add event listeners to automatically update front end
